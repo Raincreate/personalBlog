@@ -20,7 +20,6 @@ import {
   IconPoweroff,
   IconExperiment,
   IconDashboard,
-  IconInteraction,
   IconTag,
 } from '@arco-design/web-react/icon';
 import { useSelector, useDispatch } from 'react-redux';
