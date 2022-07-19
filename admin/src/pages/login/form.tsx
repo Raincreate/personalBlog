@@ -43,7 +43,7 @@ export default function LoginForm() {
     setErrorMessage('');
     setLoading(true);
     axios
-      .post('/api/user/login', params)
+      .post('/api/admin/login', params)
       .then((res) => {
         const { status, msg } = res.data;
         if (status === 'ok') {
@@ -88,7 +88,13 @@ export default function LoginForm() {
       >
         <Form.Item
           field="userName"
-          rules={[{ required: true, message: t['login.form.userName.errMsg'] }]}
+          rules={[{ 
+            required: true, 
+            message: t['login.form.userName.errMsg'] },
+            {
+              match:/^[\u4E00-\u9FA5A-Za-z0-9_]{2,12}$/,
+              message:t['login.form.userName.matchMsg']
+            }]}
         >
           <Input
             prefix={<IconUser />}
@@ -98,7 +104,13 @@ export default function LoginForm() {
         </Form.Item>
         <Form.Item
           field="password"
-          rules={[{ required: true, message: t['login.form.password.errMsg'] }]}
+          rules={[
+            { required: true, 
+              message: t['login.form.password.errMsg'] },
+              {
+                match:/^[A-Za-z0-9_]{5,15}$/,
+                message:t['login.form.password.matchMsg']
+            }]}
         >
           <Input.Password
             prefix={<IconLock />}

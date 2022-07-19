@@ -21,8 +21,10 @@ const i18n = {
   },
   'zh-CN': {
     'login.form.title': '登录 Arco Design Pro',
-    'login.form.userName.errMsg': '用户名不能为空',
-    'login.form.password.errMsg': '密码不能为空',
+    'login.form.userName.errMsg': '请输入用户名',
+    'login.form.password.matchMsg':'密码5-15位数字字母下划线组成',
+    'login.form.userName.matchMsg':'用户名必须在2-12位之间',
+    'login.form.password.errMsg': '请输入密码',
     'login.form.login.errMsg': '登录出错，请刷新重试',
     'login.form.userName.placeholder': '用户名：admin',
     'login.form.password.placeholder': '密码：admin',
