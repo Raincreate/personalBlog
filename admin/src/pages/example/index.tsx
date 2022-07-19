@@ -5,9 +5,9 @@ function Example() {
   return (
     <Card style={{ height: '80vh' }}>
       <Typography.Title heading={6}>
-        This is a very basic and simple page
+        这是一个基础的组件
       </Typography.Title>
-      <Typography.Text>You can add content here :)</Typography.Text>
+      <Typography.Text>在这里你不能添加内容</Typography.Text>
     </Card>
   );
 }
