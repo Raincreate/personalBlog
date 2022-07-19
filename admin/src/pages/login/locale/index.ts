@@ -1,8 +1,10 @@
 const i18n = {
   'en-US': {
-    'login.form.title': 'Login to Arco Design Pro',
+    'login.form.title': 'Login to Blog background management system',
     'login.form.userName.errMsg': 'Username cannot be empty',
     'login.form.password.errMsg': 'Password cannot be empty',
+    'login.form.password.matchMsg':'The password consists of 5-15 digits, letters and underscores',
+    'login.form.userName.matchMsg':'Username must be between 2-12 digits',
     'login.form.login.errMsg': 'Login error, please refresh and try again',
     'login.form.userName.placeholder': 'Username: admin',
     'login.form.password.placeholder': 'Password: admin',
@@ -20,7 +22,7 @@ const i18n = {
     'login.banner.subSlogan3': 'Realize flexible block development',
   },
   'zh-CN': {
-    'login.form.title': '登录 Arco Design Pro',
+    'login.form.title': '登录博客后台管理系统',
     'login.form.userName.errMsg': '请输入用户名',
     'login.form.password.matchMsg':'密码5-15位数字字母下划线组成',
     'login.form.userName.matchMsg':'用户名必须在2-12位之间',
