@@ -10,18 +10,12 @@ export type Route = AuthParams & {
 
 export const routes: Route[] = [
   {
-    name: 'menu.dashboard',
-    key: 'dashboard',
-    children: [
-      {
-        name: 'menu.dashboard.workplace',
-        key: 'dashboard/workplace',
-      },
-    ],
-  },
-  {
     name: 'Example',
     key: 'example',
+  },
+  {
+    name: 'menu.categories',
+    key: 'categories',
   },
 ];
 

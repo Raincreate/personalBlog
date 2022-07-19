@@ -1,8 +1,6 @@
 const i18n = {
   'en-US': {
-    'menu.dashboard': 'Dashboard',
-    'menu.categories': '分类管理',
-    'menu.dashboard.workplace': 'Workplace',
+    'menu.categories': 'categories',
     'menu.user.info': 'User Info',
     'menu.user.setting': 'User Setting',
     'menu.user.switchRoles': 'Switch Roles',
@@ -39,9 +37,7 @@ const i18n = {
     'navbar.search.placeholder': 'Please search',
   },
   'zh-CN': {
-    'menu.dashboard': '仪表盘',
     'menu.categories': '分类管理',
-    'menu.categories.workplace': '工作台',
     'menu.user.info': '用户信息',
     'menu.user.setting': '用户设置',
     'menu.user.switchRoles': '切换角色',
