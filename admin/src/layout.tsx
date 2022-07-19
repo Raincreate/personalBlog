@@ -3,11 +3,16 @@ import { Switch, Route, Link, Redirect, useHistory } from 'react-router-dom';
 import { Layout, Menu, Breadcrumb } from '@arco-design/web-react';
 import cs from 'classnames';
 import {
-  IconDashboard,
-  IconTag,
+  IconStorage,
+  IconTags,
   IconMenuFold,
   IconMenuUnfold,
-  IconList,
+  IconFile,
+  IconLink,
+  IconUser,
+  IconCommon,
+  IconWifi,
+  IconOrderedList,
 } from '@arco-design/web-react/icon';
 import { useSelector } from 'react-redux';
 import qs from 'query-string';
@@ -30,12 +35,22 @@ const Content = Layout.Content;
 
 function getIconFromKey(key) {
   switch (key) {
-    case 'dashboard':
-      return <IconDashboard className={styles.icon} />;
-    case 'example':
-      return <IconTag className={styles.icon} />;
+    case 'articles':
+      return <IconStorage className={styles.icon} />;
     case 'categories':
-      return <IconList className={styles.icon}/>
+      return <IconFile className={styles.icon} />;
+    case 'tags':
+      return <IconTags className={styles.icon} />;
+    case 'abouts':
+      return <IconLink className={styles.icon} />;
+    case 'users':
+      return <IconUser className={styles.icon} />;
+    case 'comments':
+      return <IconCommon className={styles.icon} />;
+    case 'webPages':
+      return <IconWifi className={styles.icon} />;
+    case 'orders':
+      return <IconOrderedList className={styles.icon} />;
     default:
       return <div className={styles['icon-empty']} />;
   }

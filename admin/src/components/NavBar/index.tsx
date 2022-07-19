@@ -6,7 +6,6 @@ import {
   Select,
   Dropdown,
   Menu,
-  Divider,
   Message,
   Button,
 } from '@arco-design/web-react';
@@ -14,12 +13,8 @@ import {
   IconLanguage,
   IconSunFill,
   IconMoonFill,
-  IconUser,
   IconSettings,
   IconPoweroff,
-  IconExperiment,
-  IconDashboard,
-  IconTag,
 } from '@arco-design/web-react/icon';
 import { useSelector, useDispatch } from 'react-redux';
 import { GlobalState } from '@/store';
