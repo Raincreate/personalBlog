@@ -2,7 +2,7 @@ import { request } from './request';
 
 export async function getList(params) {
     return request({
-        url: '/categories',
+        url: '/api/v1/categories',
         params,
     });
 }
