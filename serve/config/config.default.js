@@ -44,6 +44,12 @@ module.exports = appInfo => {
     encrypt: false,
   };
 
+  // 配置mongodb的配置项
+  config.mongoose = {
+    url: 'mongodb://127.0.0.1/blog',
+    options: {},
+  };
+
   return {
     ...config,
     ...userConfig,

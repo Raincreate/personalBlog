@@ -16,4 +16,10 @@ module.exports = {
     enable: true,
     package: 'egg-validate',
   },
+
+  // mongodb插件
+  mongoose: {
+    enable: true,
+    package: 'egg-mongoose',
+  },
 };
