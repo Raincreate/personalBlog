@@ -5,7 +5,11 @@ module.exports = app => {
   const Schema = mongoose.Schema;
   const AdminSchema = new Schema(
     {
-      userName: { type: String },
+      userName: {
+        type: String,
+        min: 5,
+        max: 20,
+      },
       password: { type: String },
     },
     {
@@ -15,5 +19,7 @@ module.exports = app => {
     // console.log('aa23aa')
   );
 
-  return mongoose.model('Admin', AdminSchema);
+  const AdminModel = mongoose.model('Admin', AdminSchema);
+
+  return AdminModel;
 };

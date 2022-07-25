@@ -6,14 +6,31 @@ class AdminController extends Controller {
   // eslint-disable-next-line no-useless-constructor
   constructor(ctx) {
     super(ctx);
+    this.createRule = {
+      userName: {
+        type: 'string',
+        min: 5,
+        max: 20,
+        // format: /^[\u4e00-\u9fa5A-Za-z0-9_]{5,20}$/,
+      },
+      password: {
+        type: 'password',
+        // compare: "re-password",
+        min: 4,
+        max: 20,
+        format: /^[A-Za-z0-9_]{4,20}$/,
+      },
+    };
   }
 
   async adminLogin() {
     const { ctx, service } = this;
     // console.log('这是controller中的ctx:', this);
-    const body = ctx.request.body;
+    const data = ctx.request.body;
+    // 验证信息
+    ctx.validate(this.createRule, data);
     // console.log('body:', body);
-    const res = await service.admin.adminLogin(body);
+    const res = await service.admin.adminLogin(data);
     // console.log('这是controller中的res:', res);
     ctx.body = res;
   }

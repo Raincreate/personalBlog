@@ -1,6 +1,7 @@
 /* eslint valid-jsdoc: "off" */
 
 'use strict';
+const userConfig = require('./config.userConfig');
 
 /**
  * @param {Egg.EggAppInfo} appInfo app info
@@ -17,11 +18,6 @@ module.exports = appInfo => {
 
   // add your middleware config here
   config.middleware = [];
-
-  // add your user config here
-  const userConfig = {
-    // myAppName: 'egg',
-  };
 
   // 模板
   config.view = {

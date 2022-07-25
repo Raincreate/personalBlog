@@ -5,8 +5,10 @@
  */
 module.exports = app => {
   const { router, controller } = app;
+  // 定义一个公共路径
+  const baseRouter = app.config.baseRouter;
   // 增
-  router.post('/admin/login', controller.admin.adminLogin);
+  router.post(baseRouter + '/admin/login', controller.admin.adminLogin);
   // 查
   router.get('/admin/list', controller.admin.list);
   // 删
