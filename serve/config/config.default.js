@@ -46,6 +46,11 @@ module.exports = appInfo => {
     options: {},
   };
 
+  // 配置
+  config.jwt = {
+    secret: userConfig.userName,
+  };
+
   return {
     ...config,
     ...userConfig,

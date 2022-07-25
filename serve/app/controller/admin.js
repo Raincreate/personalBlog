@@ -32,7 +32,10 @@ class AdminController extends Controller {
     // console.log('body:', body);
     const res = await service.admin.adminLogin(data);
     // console.log('这是controller中的res:', res);
-    ctx.body = res;
+    ctx.helper.success({
+      ctx,
+      res,
+    });
   }
 
   async list() {

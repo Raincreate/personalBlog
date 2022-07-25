@@ -22,4 +22,10 @@ module.exports = {
     enable: true,
     package: 'egg-mongoose',
   },
+
+  // 返回token
+  jwt: {
+    enable: true,
+    package: 'egg-jwt',
+  },
 };
