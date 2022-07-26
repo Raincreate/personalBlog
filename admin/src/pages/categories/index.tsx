@@ -7,13 +7,11 @@ import {
   Button,
   Input,
 } from '@arco-design/web-react';
-import { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { getList, create, update, remove } from '../../api/categories';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { getList } from '../../api/categories';
 
 import {
-  TOGGLE_CONFIRM_LOADING,
-  TOGGLE_VISIBLE,
   UPDATE_FORM_PARAMS,
   UPDATE_LIST,
   UPDATE_LOADING,
@@ -22,6 +20,11 @@ import {
 
 function Categories() {
   const dispatch = useDispatch();
+
+  const findData = () => {
+    console.log('aaa');
+
+  }
 
   const columns: TableColumnProps[] = [
     {
@@ -46,7 +49,7 @@ function Categories() {
       render: () => {
         return (
           <div>
-            <Button type='text' size='small'>查看</Button>
+            <Button type='text' size='small' onClick={findData}>查看</Button>
             <Button type='text' size='small'>更新</Button>
             <Button type='text' size='small' status='danger'>删除</Button>
           </div>
@@ -92,18 +95,19 @@ function Categories() {
       email: 'william.smith@example.com',
     },
   ];
-  
+
   async function fetchData(current = 1, pageSize = 20, params = {}) {
     dispatch({ type: UPDATE_LOADING, payload: { loading: true } });
+
     try {
       const postData = {
         page: current,
         pageSize,
         ...params,
       };
-      console.log(postData);
+      console.log('postData', postData);
       const res: any = await getList(postData);
-      console.log(res);
+      console.log('res:', res);
       if (res) {
         dispatch({ type: UPDATE_LIST, payload: { data: res.data.list } });
         dispatch({
@@ -113,12 +117,13 @@ function Categories() {
         dispatch({ type: UPDATE_LOADING, payload: { loading: false } });
         dispatch({ type: UPDATE_FORM_PARAMS, payload: { params } });
       }
-    } catch (error) {}
+    } catch (error) { }
   }
-  
+
   function onSearch(name) {
-    fetchData(1,pagination.pageSize,{name})
+    fetchData(1, pagination.pageSize, { name })
   }
+
   const [pagination, setPagination] = useState({
     sizeCanChange: true,
     showTotal: true,
@@ -136,6 +141,9 @@ function Categories() {
       setPagination((pagination) => ({ ...pagination, current, pageSize }));
       setLoading(false);
     }, 1000);
+    fetchData(1, pagination.pageSize, {  })
+    console.log('fetchData(1, pagination.pageSize, {  })');
+    
   }
 
   return (

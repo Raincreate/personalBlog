@@ -44,6 +44,17 @@ class AdminController extends Controller {
     ctx.body = res;
   }
 
+
+  async adminLogout() {
+    const { ctx, service } = this;
+    const res = await service.admin.adminLogout();
+    ctx.helper.success({
+      res,
+      ctx,
+    });
+
+  }
+
   async remove() {
     const { ctx, service } = this;
     const { id } = ctx.params;

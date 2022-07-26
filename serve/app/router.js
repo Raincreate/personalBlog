@@ -9,6 +9,7 @@ module.exports = app => {
   const baseRouter = app.config.baseRouter;
   // 增
   router.post(baseRouter + '/admin/login', controller.admin.adminLogin);
+  router.post(baseRouter + '/admin/logout', controller.admin.adminLogout);
   // 查
   router.get('/admin/list', controller.admin.list);
   // 删

@@ -52,6 +52,18 @@ class AdminService extends Service {
     // return res;
   }
 
+  async adminlogout() {
+    const { ctx } = this;
+    ctx.cookies.set('token', '', {
+      maxAge: 0,
+    });
+
+    return {
+      msg: '退出成功',
+    };
+  }
+
+
   async list() {
     const { ctx } = this;
     const res = await ctx.model.Admin.find();
