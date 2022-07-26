@@ -1,4 +1,3 @@
-// import { PaginationProps } from '@arco-design/web-react/es/Pagination/pagination';
 import { LOGIN } from './actionTypes';
 
 const initialState = {

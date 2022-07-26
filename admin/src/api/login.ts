@@ -1,9 +1,9 @@
-import {request} from './request'
+import { request } from './request'
 
-export async function login(data){
+export async function login(data) {
     return request({
-        url:'/admin/login',
-        method:'POST',
+        url: '/admin/login',
+        method: 'POST',
         data,
     })
 }

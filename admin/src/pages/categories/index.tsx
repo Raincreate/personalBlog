@@ -8,7 +8,7 @@ import {
   Input,
 } from '@arco-design/web-react';
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { getList } from '../../api/categories';
 
 import {
@@ -141,9 +141,9 @@ function Categories() {
       setPagination((pagination) => ({ ...pagination, current, pageSize }));
       setLoading(false);
     }, 1000);
-    fetchData(1, pagination.pageSize, {  })
+    fetchData(1, pagination.pageSize, {})
     console.log('fetchData(1, pagination.pageSize, {  })');
-    
+
   }
 
   return (

@@ -92,6 +92,8 @@ function Categories() {
 
   const categoriesState = useSelector((state: ReducerState) => state.categories);
 
+  console.log('categoriesState;',categoriesState);
+
   console.log('categoriesState:',categoriesState);
   
 
