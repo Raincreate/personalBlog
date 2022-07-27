@@ -16,7 +16,7 @@ export const defaultRoute = 'welcome';
 
 export const routes = [
   {
-    name: '文章管理',
+    name: 'menu.articles',
     key: 'articles',
     icon: <IconBook />,
     componentPath: 'articles',
@@ -36,31 +36,31 @@ export const routes = [
   },
 
   {
-    name: '标签管理',
+    name: 'menu.tags',
     key: 'tags',
     icon: <IconTags />,
     componentPath: 'tags',
   },
   {
-    name: '关于管理',
+    name: 'menu.abouts',
     key: 'about',
     icon: <IconHeart />,
     componentPath: 'about',
   },
   {
-    name: '用户管理',
+    name: 'menu.user',
     key: 'user',
     icon: <IconUser />,
     componentPath: 'user',
   },
   {
-    name: '评论管理',
+    name: 'menu.comment',
     key: 'comment',
     icon: <IconMessage />,
     componentPath: 'comment',
   },
   {
-    name: '网页配置',
+    name: 'menu.site',
     key: 'site',
     icon: <IconSettings />,
     children: [
