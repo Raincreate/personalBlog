@@ -33,7 +33,7 @@ const initialState: GlobalState = {
   collapsed: false,
   userInfo: {
     name: 'never',
-    avatar: 'http://nevergiveupt.top:3000/static/mine.d0f112df.jpeg',
+    avatar: '',
   },
 };
 

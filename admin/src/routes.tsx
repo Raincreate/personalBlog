@@ -12,7 +12,7 @@ import {
   IconBook,
 } from '@arco-design/web-react/icon';
 
-export const defaultRoute = 'welcome';
+export const defaultRoute = 'articles';
 
 export const routes = [
   {
