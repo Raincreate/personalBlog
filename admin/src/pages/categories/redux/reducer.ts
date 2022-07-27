@@ -1,5 +1,12 @@
 import { PaginationProps } from '@arco-design/web-react/es/Pagination/pagination';
-import { UPDATE_LIST, UPDATE_LOADING, UPDATE_PAGINATION, UPDATE_FORM_PARAMS, TOGGLE_VISIBLE, TOGGLE_CONFIRM_LOADING } from './actionTypes';
+import { 
+  UPDATE_LIST, 
+  UPDATE_LOADING, 
+  UPDATE_PAGINATION, 
+  UPDATE_FORM_PARAMS, 
+  TOGGLE_VISIBLE, 
+  TOGGLE_CONFIRM_LOADING 
+} from './actionTypes';
 
 const initialState = {
   data: [],

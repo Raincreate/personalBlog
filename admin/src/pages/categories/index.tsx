@@ -23,7 +23,12 @@ import {
 import useLocale from '../../utils/useLocale';
 import { ReducerState } from '../../redux';
 import styles from './style/index.module.less';
-import { getList, create, update, remove } from '../../api/categories';
+import { 
+  getList, 
+  create, 
+  update, 
+  remove 
+} from '../../api/categories';
 import { EditableCell, EditableRow } from './edit';
 import dayjs from 'dayjs';
 
@@ -77,9 +82,6 @@ function Categories() {
       dataIndex: 'operations',
       render: (_, record) => (
         <div className={styles.operations}>
-          {/* <Button type="text" size="small">
-            {locale['searchTable.columns.operations.update']}
-          </Button> */}
           <Popconfirm title="Are you sure you want to delete?" onOk={() => onDelete(record)}>
             <Button type="text" status="danger" size="small">
               {locale['searchTable.columns.operations.delete']}
@@ -94,16 +96,13 @@ function Categories() {
 
   console.log('categoriesState;',categoriesState);
 
-  console.log('categoriesState:',categoriesState);
-  
-
   const { data, pagination, loading, formParams, visible, confirmLoading } = categoriesState;
 
   useEffect(() => {
     fetchData();
   }, []);
 
-  async function fetchData(current = 1, pageSize = 20, params = {}) {
+  async function fetchData(current = 1, pageSize = 10, params = {}) {
     dispatch({ type: UPDATE_LOADING, payload: { loading: true } });
     try {
       const postData = {
