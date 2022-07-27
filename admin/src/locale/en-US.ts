@@ -1,6 +1,6 @@
 import localeSettings from './en-US/settings';
 import localeMessageBox from '../components/MessageBox/locale/en-US';
-import localeSearchTable from '../pages/search-table/locale/en-US';
+// import localeSearchTable from '../pages/search-table/locale/en-US';
 import login from '../pages/login/locale/en-US';
 
 export default {
@@ -15,6 +15,6 @@ export default {
   'menu.site': 'site',
   ...localeSettings,
   ...localeMessageBox,
-  ...localeSearchTable,
+  // ...localeSearchTable,
   ...login,
 };
