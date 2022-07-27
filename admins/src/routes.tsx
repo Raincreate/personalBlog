@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  IconGift,
   IconStorage,
   IconTags,
   IconHeart,
@@ -16,24 +15,6 @@ import {
 export const defaultRoute = 'welcome';
 
 export const routes = [
-  {
-    name: 'menu.welcome',
-    key: 'welcome',
-    icon: <IconGift />,
-    componentPath: 'welcome',
-  },
-  // {
-  //   name: 'menu.list',
-  //   key: 'list',
-  //   icon: <IconList />,
-  //   children: [
-  //     {
-  //       name: 'menu.list.searchTable',
-  //       key: 'list/search-table',
-  //       componentPath: 'search-table',
-  //     },
-  //   ],
-  // },
   
   {
     name: '文章管理',
