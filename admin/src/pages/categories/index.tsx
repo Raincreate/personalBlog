@@ -82,7 +82,7 @@ function Categories() {
       dataIndex: 'operations',
       render: (_, record) => (
         <div className={styles.operations}>
-          <Popconfirm title="Are you sure you want to delete?" onOk={() => onDelete(record)}>
+          <Popconfirm title="你确定想要删除?" onOk={() => onDelete(record)}>
             <Button type="text" status="danger" size="small">
               {locale['searchTable.columns.operations.delete']}
             </Button>
@@ -243,7 +243,7 @@ function Categories() {
         />
 
         <Modal
-          title={<div style={{ textAlign: 'left' }}> 添加分类 </div>}
+          title='添加分类'
           visible={visible}
           onOk={onOk}
           confirmLoading={confirmLoading}

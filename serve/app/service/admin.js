@@ -52,7 +52,7 @@ class AdminService extends Service {
     // return res;
   }
 
-  async adminlogout() {
+  async adminLogout() {
     const { ctx } = this;
     ctx.cookies.set('token', '', {
       maxAge: 0,

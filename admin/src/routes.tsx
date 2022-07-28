@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   IconStorage,
-  IconTags,
+  // IconTags,
   IconHeart,
   IconUser,
   IconMessage,
@@ -34,13 +34,12 @@ export const routes = [
     icon: <IconStorage />,
     componentPath: 'categories',
   },
-
-  {
-    name: 'menu.tags',
-    key: 'tags',
-    icon: <IconTags />,
-    componentPath: 'tags',
-  },
+  // {
+  //   name: 'menu.tags',
+  //   key: 'tags',
+  //   icon: <IconTags />,
+  //   componentPath: 'tags',
+  // },
   {
     name: 'menu.abouts',
     key: 'about',
