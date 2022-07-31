@@ -26,6 +26,8 @@ module.exports = app => {
   router.post('/admin/updateData/:id', controller.admin.updateData);
 
   router.resources('about', baseRouter + '/about', jwt, controller.about)
+  router.resources('home', baseRouter + '/config/home', jwt, controller.config.home) // 网页配置-首页配置
+  router.resources('hf', baseRouter + '/config/hf', jwt, controller.config.hf) // 网页配置-Header/Footer配置
 
   router.resources('articles', baseRouter + '/articles', jwt, controller.articles) // 文章
   router.put(baseRouter + 'articles/status/:id', jwt, controller.articles.changeStatusRule)
