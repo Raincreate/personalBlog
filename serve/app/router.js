@@ -27,6 +27,15 @@ module.exports = app => {
 
   router.resources('about', baseRouter + '/about', jwt, controller.about)
 
+  router.resources('articles', baseRouter + '/articles', jwt, controller.articles) // 文章
+  router.put(baseRouter + 'articles/status/:id', jwt, controller.articles.changeStatusRule)
+  router.put(baseRouter + 'articles/publishStatus/:id', jwt, controller.articles.changePublishStatusRule)
+
+  router.post(
+    baseRouter + "/articles/collectStatus",
+    jwt,
+    controller.articles.changeCollectStatus
+  ); // 一键开启或关闭收藏
 
 };
 
