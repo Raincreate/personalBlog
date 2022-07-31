@@ -44,6 +44,18 @@ module.exports = {
       msg: res.msg ? res.msg : '请求成功！',
     };
   },
+
+  filterEmptyField(params) {
+    let pam = {};
+    for (let i in params) {
+      if (params[i]) {
+        if (i !== "page" && i !== "pageSize") {
+          pam[i] = params[i];
+        }
+      }
+    }
+    return pam;
+  },
 };
 
 exports.relativeTime = time => moment(new Date(time)).format('YYYY-MM-DD HH:mm:ss');

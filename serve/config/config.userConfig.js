@@ -1,5 +1,5 @@
 
 module.exports = {
-  userName: 'Rain',
+  userName: 'admin',
   baseRouter: '/api/v1',
 };

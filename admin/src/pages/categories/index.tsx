@@ -78,13 +78,14 @@ function Categories() {
     },
 
     {
-      title: locale['searchTable.columns.operations'],
+      title: '操作',
       dataIndex: 'operations',
       render: (_, record) => (
         <div className={styles.operations}>
           <Popconfirm title="你确定想要删除?" onOk={() => onDelete(record)}>
-            <Button type="text" status="danger" size="small">
-              {locale['searchTable.columns.operations.delete']}
+            <Button type="primary" status='danger' size="small">
+              删除
+              {/* {locale['searchTable.columns.operations.delete']} */}
             </Button>
           </Popconfirm>
         </div>

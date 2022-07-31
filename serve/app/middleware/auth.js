@@ -7,6 +7,7 @@ module.exports = () => {
 
     // 后台校验用户访问权限。
     const urlWhiteList = ["/admin/login","/admin/logout"];
+    console.log('这是auth里面的ctx:',ctx.app.config.auth);
     const whiteList = ctx.app.config.auth.whiteList; // ['admin']
     const secret = ctx.app.config.jwt.secret;
 
